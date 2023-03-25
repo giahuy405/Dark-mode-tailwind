@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 // nhớ đặt <html lang="en" class="dark"> ở index.html
 const DarkMode = () => {
     const [theme, setTheme] = useState(
-        localStorage.getItem('theme') ? localStorage.getItem('theme') : "dark"
+        localStorage.getItem('theme') ? localStorage.getItem('theme') : "system"
     );
     const element = document.documentElement;
-    const darkQuery = window.matchMedia("(prefers-color-schema: dark)")
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    console.log(darkQuery)
     const option = [
         {
             icon: "sunny-outline",
